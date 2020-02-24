@@ -1,2 +1,7 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<h1 class="text-center">Your Bookings</h1>
+<ul>
+  <% @bookings.each do |booking| %>
+  <li>Start Date:<%= booking.start_date %></li>
+  <li>End Date: <%= booking.end_date %></li>
+  <% end %>
+</ul>
