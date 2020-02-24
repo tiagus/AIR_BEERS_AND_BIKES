@@ -7,10 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Destroying all Bikes!"
+sleep(3)
 
 Bike.destroy_all
 
 puts "Creating 50 bikes!"
+sleep(3)
+
 
 50.times do
   Bike.create(
