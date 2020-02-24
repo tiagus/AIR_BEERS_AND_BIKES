@@ -1,6 +1,16 @@
 <h1>Beers & Bikes</h1>
 <p>The Best Beers & Bikes</p>
 <%= render "/shared/caroussel" %>
-<%= render "/shared/search" %>
+<%#= render "/shared/search" %>
 
+<div class="container">
+  <div class="form-wrapper" style= "width: 500px; margin: 0 auto;">
+    <h3>Select your dates and check what's available</h3>
+<%= simple_form_for :search, method: :get do |t| %>
+<%= t.input :starts_at, input_html: { class: "datepicker"} %>
+<%= t.input :ends_at, input_html: { class: "datepicker"} %>
+<%= t.submit "Go", class: "btn btn-primary" %>
+<% end %>
+  </div>
+</div>
 
