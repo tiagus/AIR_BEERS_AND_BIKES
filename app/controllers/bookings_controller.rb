@@ -1,23 +1,26 @@
 class BookingsController < ApplicationController
-  before_action :find_booking, only: [:update, :edit, :destroy]
+  before_action :find_booking, only: [:show, :update, :edit, :destroy]
 
   def index
     @bookings = Booking.all
   end
 
   def show
-    @bookings = current_user.bookings
   end
 
 
   def new
     @booking = Booking.new
+    @bike = Bike.find(params[:bike_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @bike = Bike.find(params[:bike_id])
+    @booking.bike = @bike
+    @booking.user = current_user
     if @booking.save!
-      redirect_to @booking
+      redirect_to bike_bookings_path
     else
       render :new
     end
@@ -27,8 +30,9 @@ class BookingsController < ApplicationController
   end
 
   def update
+    @booking.user = current_user
     @booking.update(booking_params)
-    redirect_to @booking
+    redirect_to bike_booking_path(@booking)
   end
 
   def destroy
@@ -46,3 +50,4 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:start_date, :end_date)
   end
 end
+
