@@ -1,16 +1,16 @@
-<div class="container">
-  <div class="cover">
-    <h1>Discover Portugal's best Beers and Bikes.</h1>
-
-  <%= form_tag bikes_path, method: :get, class: 'flex-form' do %>
-    <i class="fas fa-motorcycle"></i>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "flex-form",
-      placeholder: "Find a bike"
-    %>
-    <%= submit_tag "Search" %>
-  <% end %>
-
-</div>
+<div class="banner">
+  <div class="container">
+    <div class="cover">
+      <h1>Discover Portugal's best Beers and Bikes.</h1>
+        <%= form_tag bikes_path, method: :get, class: 'flex-form' do %>
+          <i class="fas fa-motorcycle"></i>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "flex-form",
+            placeholder: "Find a bike"%>
+          <%= submit_tag "Search" %>
+        <% end %>
+    </div>
+    <%= render 'shared/body' %>
+  </div>
 </div>
