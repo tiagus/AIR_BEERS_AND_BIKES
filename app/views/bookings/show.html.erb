@@ -1,6 +1,8 @@
 <h1 class="text-center">Your Bookings</h1>
 <ul>
-  <li>Start Date:<%= @booking.start_date %></li>
+  <li>Start Date: <%= @booking.start_date %></li>
   <li>End Date: <%= @booking.end_date %></li>
-<!--   # vai dar conflito mas precisa de ficar falar com o TIAGO
- --></ul>
+  <p>Vehicle: <%= @booking.bike.brand %> <%= @booking.bike.model %></p>
+</ul>
+<%= link_to 'Edit', edit_bike_booking_path(@booking) %>
+<%= link_to 'Back', bike_bookings_path %>

@@ -1,3 +1,16 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
-<!-- This View is in standby because it will list the bookings of all users, so it will be useful for an admin -->
+<h1 class="text-center">Manage all Bookings</h1>
+<ul>
+  <div class='bike'>
+    <% @bookings.each do |booking| %>
+    <li><strong>User: </strong><%= booking.user.email %></li>
+    <li>Start date: <%= booking.start_date %></li>
+    <li>End date: <%=  %></li>
+    <li>Vehicle: <%= booking.bike.brand %> <%= booking.bike.model %></li>
+    <%= link_to 'Show', bike_booking_path(booking.bike, booking) %>
+    <%= link_to 'Edit', edit_bike_booking_path(booking.bike, booking) %>
+    <%= link_to 'Destroy', bike_booking_path(booking.bike, booking), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Create', new_bike_booking_path %>
+    <% end %>
+  </div>
+</ul>
+
