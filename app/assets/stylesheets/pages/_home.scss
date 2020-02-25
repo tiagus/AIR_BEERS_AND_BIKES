@@ -108,7 +108,7 @@ a.btn:hover {
 }
 
 .cover  {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   padding: 20px 50px;
   display: -webkit-box;
@@ -223,3 +223,28 @@ input[type="search"] {
     display: none;
   }
 }
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+// //#search_starts_at{
+//   width: 100px;
+// }
+
+// #search_ends_at{
+//   width: 100px;
+// }
+
+form {
+  display: inline-block;
+}
+
+// //.box div {
+//   width: 100px;
+//   height: 100px;
+// }
+

@@ -1,23 +1,15 @@
 <div class="container">
   <div class="cover">
     <h1>Discover what's out there.</h1>
-    <%= form_tag bikes_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a bike"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-   <!-- <h3>Select your dates and check what's available</h3>-->
-<%= simple_form_for :search, method: :get do |t| %>
-<%= t.input :starts_at, label: false, input_html: { class: "datepicker"} %>
-<%= t.input :ends_at, label: false, input_html: { class: "datepicker"} %>
-<%= t.submit "Go", class: "btn btn-primary" %>
-<% end %>
-  </div>
+
+  <%= form_tag bikes_path, method: :get, class: 'flex-form' do %>
+    <i class="fas fa-motorcycle"></i>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "flex-form",
+      placeholder: "Find a bike"
+    %>
+    <%= submit_tag "Search" %>
+  <% end %>
 </div>
-
-  </div>
-
 </div>
