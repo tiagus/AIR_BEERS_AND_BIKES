@@ -1,6 +1,7 @@
 class Bike < ApplicationRecord
   has_many :bookings
   has_many :users, through: :bookings
+  has_one_attached :photo
 
   validates :model, presence: true
   validates :brand, presence: true
