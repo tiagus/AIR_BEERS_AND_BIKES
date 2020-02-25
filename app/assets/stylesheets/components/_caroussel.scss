@@ -1,5 +1,20 @@
-.carousel-item {
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
+.card {
+  height: 300px;
+  width: 200px;
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body {
+  a {
+    color: blue;
+  }
+}
+
+.cards-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

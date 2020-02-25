@@ -1,13 +1,15 @@
-<h1>Bikes#show</h1>
-<p>Find me in app/views/bikes/show.html.erb</p>
+<h1><strong><%= @bike.brand %> <%= @bike.model %></strong></h1>
 <div>
-  <ul>
-  <li>Brand: <%= @bike.brand%></li>
-  <li>Model: <%= @bike.model%></li>
-  <li>Price: <%= @bike.price%></li>
-  <li>Speed: <%= @bike.speed%></li>
-  </ul>
-</div>
-<div>
- <%= link_to "Book Me Now!", new_bike_booking_path(@bike) %>
+  <div class="cards-list">
+    <div class="card" style="width: 32rem;">
+      <%= cl_image_tag @bike.photo.key, class: "card-img-top"  %>
+      <div class="card-body">
+        <ul>
+          <li>Price: <%= @bike.price%></li>
+          <li>Speed: <%= @bike.speed%></li>
+        </ul>
+        <%= link_to "Book Me Now!", new_bike_booking_path(@bike), class: "btn btn-primary" %>
+        </div>
+    </div>
+  <div>
 </div>
