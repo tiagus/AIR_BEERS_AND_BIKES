@@ -1,16 +1,37 @@
-<h1 class="text-center">Manage all Bookings</h1>
-<ul>
-  <div class='bike'>
-    <% @bookings.each do |booking| %>
-    <li><strong>User: </strong><%= booking.user.email %></li>
-    <li>Start date: <%= booking.start_date %></li>
-    <li>End date: <%=  %></li>
-    <li>Vehicle: <%= booking.bike.brand %> <%= booking.bike.model %></li>
-    <%= link_to 'Show', bike_booking_path(booking.bike, booking) %>
-    <%= link_to 'Edit', edit_bike_booking_path(booking.bike, booking) %>
-    <%= link_to 'Destroy', bike_booking_path(booking.bike, booking), method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'Create', new_bike_booking_path %>
-    <% end %>
-  </div>
-</ul>
+<h1 class="text-center">My Bookings</h1>
 
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.bike.brand %></td>
+        <td><%= booking.bike.model %></td>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.end_date %></td>
+        <td><%= booking.user.email %></td>
+
+        <td>
+          <% if policy(booking).update? %>
+            <%= link_to 'Edit', edit_bike_booking_path(booking.bike, booking) %>
+          <% end %>
+        </td>
+        <td>
+          <% if policy(booking).destroy? %>
+            <%= link_to 'Destroy', bike_booking_path(booking.bike, booking), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

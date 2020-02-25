@@ -1,7 +1,9 @@
 class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      # @scope.all
+      scope.where(user: user)
+
     end
   end
 
@@ -14,6 +16,18 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def edit?
+    user_is_owner_or_admin?
+  end
+
+  def update?
+    # user - this is the current user
+    # record - this is the restaurant in this case because its a RestaurantPolicy
+    user_is_owner_or_admin?
+  end
+
+  def destroy?
+    # user - this is the current user
+    # record - this is the restaurant in this case because its a RestaurantPolicy
     user_is_owner_or_admin?
   end
 
