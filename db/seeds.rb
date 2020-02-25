@@ -137,12 +137,12 @@ sleep(1)
   bike11.photo.attach(io: img11, filename: 'bike.jpg', content_type: 'image/jpg')
 
 
-  img12 = URI.open('https://5.imimg.com/data5/PQ/RR/GLADMIN-69966587/honda-cb-hornet-160r-std-bike-500x500.png')
+  img12 = URI.open('https://www.motardinn.com/f/13667/136674457_4/shad-semirigid-side-bag-holder-kit-ducati-monster-1200.jpg')
   bike12 = Bike.create(
-    brand: 'Honda' ,
-    model: 'Hornet 160R',
+    brand: 'Ducati' ,
+    model: 'Monster',
     price: rand(700..1200),
     speed: rand(170..208),
     rented: false
   )
-  bike12.photo.attach(io: img12, filename: 'bike.png', content_type: 'image/png')
+  bike12.photo.attach(io: img12, filename: 'bike.jpg', content_type: 'image/jpg')
