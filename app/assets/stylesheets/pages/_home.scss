@@ -27,13 +27,28 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+
+}
+
+.banner {
   margin: 0;
-  background: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   color: #0a0a0b;
   overflow: hidden;
+}
+
+.banner-light {
+  margin: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  color: #0a0a0b;
+  overflow: hidden;
+  min-height: 80vh;
 }
 
 ul, nav{
