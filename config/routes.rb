@@ -6,5 +6,4 @@ Rails.application.routes.draw do
   resources :bikes, only: [:index, :show] do
     resources :bookings
   end
-
 end
