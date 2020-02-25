@@ -14,7 +14,13 @@
     <p class="alert"><%= alert %></p>
     <%= render 'shared/flashes' %>
 
-    <%= yield %>
+
+    <div id="body-container" class="">
+
+      <%= yield %>
+
+    </div>
+
     <%= render "/shared/footer" %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
