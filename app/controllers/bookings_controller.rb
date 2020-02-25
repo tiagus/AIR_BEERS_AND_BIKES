@@ -1,17 +1,20 @@
 class BookingsController < ApplicationController
-  before_action :find_booking, only: [:show, :update, :edit, :destroy]
+  before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   def index
-    @bookings = Booking.all
+    # @bookings = Booking.all
+    @bookings = policy_scope(Booking)
   end
 
   def show
+    # @bookings = current_user.bookings
   end
 
 
   def new
     @booking = Booking.new
     @bike = Bike.find(params[:bike_id])
+    authorize @booking
   end
 
   def create
@@ -42,8 +45,9 @@ class BookingsController < ApplicationController
 
   private
 
-  def find_booking
+  def set_booking
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def booking_params
