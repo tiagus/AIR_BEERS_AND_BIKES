@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(version: 2020_02_25_152009) do
   end
 
   create_table "bikes", force: :cascade do |t|
-    t.string "brand"
-    t.string "model"
-    t.integer "price"
-    t.integer "speed"
-    t.boolean "rented", default: false
+    t.string "brand", null: false
+    t.string "model", null: false
+    t.integer "price", null: false
+    t.integer "speed", null: false
+    t.boolean "rented", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_02_25_152009) do
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "bike_id"
-    t.date "start_date", default: "2020-02-24"
+    t.date "start_date"
     t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
