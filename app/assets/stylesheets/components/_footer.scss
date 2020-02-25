@@ -1,5 +1,20 @@
-.footer-copyright{
+.disclaimer{
   display: flex;
   justify-content: center;
   align-items: center;
+  bottom-padding: 20px;
+}
+
+.footer{
+  background: rgba(90,88,85,0.5);
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+}
+
+.footer a:hover {
+color: grey
 }
