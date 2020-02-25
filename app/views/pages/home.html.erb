@@ -1,16 +1,46 @@
-<h1>Beers & Bikes</h1>
-<p>The Best Beers & Bikes</p>
-<%= render "/shared/caroussel" %>
-<%#= render "/shared/search" %>
-
 <div class="container">
-  <div class="form-wrapper" style= "width: 500px; margin: 0 auto;">
-    <h3>Select your dates and check what's available</h3>
+
+  <header>
+    <h2><a href="#"><i class="fas fa-motorcycle"></i> Air Beers & Bikes</a></h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" title="Hotels">Bikes</a>
+        </li>
+        <li>
+          <a href="#" title="Flights">Beers</a>
+        </li>
+        <li>
+          <a href="#" title="Tours">Tours</a>
+        </li>
+        <li>
+          <a class="btn" href="#" title="Register / Log In">Register/Log In</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="cover">
+    <h1>Discover what's out there.</h1>
+    <%= form_tag bikes_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a bike"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+   <!-- <h3>Select your dates and check what's available</h3>-->
 <%= simple_form_for :search, method: :get do |t| %>
-<%= t.input :starts_at, input_html: { class: "datepicker"} %>
-<%= t.input :ends_at, input_html: { class: "datepicker"} %>
+<%= t.input :starts_at, label: false, input_html: { class: "datepicker"} %>
+<%= t.input :ends_at, label: false, input_html: { class: "datepicker"} %>
 <%= t.submit "Go", class: "btn btn-primary" %>
 <% end %>
   </div>
 </div>
+    <div id="madeby">
 
+    </div>
+  </div>
+
+</div>
