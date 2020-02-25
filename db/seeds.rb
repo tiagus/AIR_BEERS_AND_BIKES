@@ -13,7 +13,7 @@ sleep(1)
 Booking.destroy_all
 Bike.destroy_all
 
-puts "Creating 8 bikes!"
+puts "Creating 12 bikes!"
 sleep(1)
 
 
