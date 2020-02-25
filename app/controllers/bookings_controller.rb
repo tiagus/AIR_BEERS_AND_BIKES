@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
   def index
     # @bookings = Booking.all
     @bookings = policy_scope(Booking)
+
   end
 
   def show
@@ -14,16 +15,20 @@ class BookingsController < ApplicationController
   def new
     @booking = Booking.new
     @bike = Bike.find(params[:bike_id])
+
     authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
+
+    authorize @booking
+
     @bike = Bike.find(params[:bike_id])
     @booking.bike = @bike
     @booking.user = current_user
     if @booking.save!
-      redirect_to bike_bookings_path
+      redirect_to bookings_path
     else
       render :new
     end
@@ -40,7 +45,9 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to root_path
+    redirect_to bike_bookings_path
+
+
   end
 
   private
