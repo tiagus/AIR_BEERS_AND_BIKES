@@ -1,0 +1,23 @@
+.datepicker {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+}
+@media (max-width: 500px) {
+  .datepicker {
+    min-width: 90%;
+  }
+}
+
+.card{
+  text-align: center;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+}
+@media (max-width: 500px) {
+  .card {
+    min-width: 90%;
+  }
+}
