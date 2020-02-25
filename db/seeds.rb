@@ -82,7 +82,6 @@ sleep(1)
   )
   bike6.photo.attach(io: img6, filename: 'bike.jpg', content_type: 'image/jpg')
 
-
   img7 = URI.open('https://www.soulfulbikes.com/storage/app/uploads/public/1e7/5d8/84a/thumb__500x450_0_0_auto.png')
   bike7 = Bike.create(
     brand: 'Piaggio' ,
@@ -104,6 +103,7 @@ sleep(1)
   )
   bike8.photo.attach(io: img8, filename: 'bike.png', content_type: 'image/png')
 
+
   img9 = URI.open('https://www.chelseamotorcycles.co.uk/wp-content/uploads/2018/03/2018-Zero-SR-motorbike-side-view-white.jpg')
   bike9 = Bike.create(
     brand: 'Zero' ,
@@ -113,6 +113,7 @@ sleep(1)
     rented: false
   )
   bike9.photo.attach(io: img9, filename: 'bike.jpg', content_type: 'image/jpg')
+
 
   img10 = URI.open('https://scooters.ltd.uk/wp-content/uploads/2018/08/Honda-CB300R-road-motorbike-Candy-Chromosphere-Red-colour.png')
   bike10 = Bike.create(
@@ -125,16 +126,6 @@ sleep(1)
   bike10.photo.attach(io: img10, filename: 'bike.png', content_type: 'image/png')
 
 
-  img11 = URI.open('https://img.pixers.pics/pho_wat(s3:700/FO/54/15/73/69/700_FO54157369_166def02d6a512d24c3269f92df956a0.jpg,700,468,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,418,jpg)/stickers-custom-black-motorcycle-side-view-on-a-white-background.jpg')
-  bike11 = Bike.create(
-    brand: 'Harley Davidson' ,
-    model: 'Turbolenta',
-    price: rand(125..800),
-    speed: rand(200..280),
-    rented: false
-  )
-  bike11.photo.attach(io: img11, filename: 'bike.jpg', content_type: 'image/jpg')
-
   img11 = URI.open('https://www.motosport.com.pt/wp-content/uploads/2018/08/2019-kawasaki-ninja-h2-4.jpg')
   bike11 = Bike.create(
     brand: 'Kawasaki' ,
@@ -144,6 +135,7 @@ sleep(1)
     rented: false
   )
   bike11.photo.attach(io: img11, filename: 'bike.jpg', content_type: 'image/jpg')
+
 
   img12 = URI.open('https://5.imimg.com/data5/PQ/RR/GLADMIN-69966587/honda-cb-hornet-160r-std-bike-500x500.png')
   bike12 = Bike.create(
