@@ -6,6 +6,7 @@ class CreateBikes < ActiveRecord::Migration[5.2]
       t.integer :price, null: false
       t.integer :speed, null: false
       t.boolean :rented, null: false, default: false
+      t.text :address
 
       t.timestamps
     end
