@@ -13,10 +13,10 @@ class BookingsController < ApplicationController
 
 
   def new
-    @booking = Booking.new
-    @bike = Bike.find(params[:bike_id])
+    # @booking = Booking.new
+    # @bike = Bike.find(params[:bike_id])
 
-    authorize @booking
+    # authorize @booking
   end
 
   def create
@@ -40,12 +40,12 @@ class BookingsController < ApplicationController
   def update
     @booking.user = current_user
     @booking.update(booking_params)
-    redirect_to bike_booking_path(@booking)
+    redirect_to bookings_path(@booking)
   end
 
   def destroy
     @booking.destroy
-    redirect_to bike_bookings_path
+    redirect_to bookings_path(@booking)
 
 
   end
