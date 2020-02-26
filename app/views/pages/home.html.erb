@@ -12,8 +12,24 @@
       <% end %>
     </div>
   </div>
-
 </div>
 <%= render 'shared/body' %>
-<!-- load bikes partial -->
+
+  <h4>Bikes <i class="fas fa-motorcycle"></i> </h4>
+  <div class="row cards">
+    <% @bikes.each do |bike| %>
+      <div class="col-3">
+        <div class="card-category-bikes">
+          <%= link_to bike_path(bike) do %>
+            <div class="card-bikes" style="width: 18rem;">
+              <%= cl_image_tag bike.photo.key, class: "card-img-index"  %>
+              <div class="card-body-bikes">
+                <h6><%= "#{bike.brand} #{bike.model}" %></h6>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 <%= render 'shared/map' %>

@@ -40,9 +40,8 @@ body{
 }
 
 .card-bikes{
-background-size: cover;
+  background-size: cover;
   background-position: center;
-
   justify-content: center;
   align-items: center;
   color: white;
@@ -55,9 +54,8 @@ background-size: cover;
 }
 
 .card-body-bikes{
-background-size: cover;
+  background-size: cover;
   background-position: center;
-
   justify-content: center;
   align-items: center;
   color: white;
@@ -76,11 +74,14 @@ background-size: cover;
 // }
 
 .card-img-index{
-  width: 180px;
+  height: 155px;
+  width: 235px;
   margin-left: 75px;
+
 }
 
 
 .card-body-bikes h6 {
 text-align: center;
+color: gray;
   }
