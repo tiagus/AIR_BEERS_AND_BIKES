@@ -23,7 +23,8 @@ sleep(1)
     model: 'Street Glide',
     price: rand(125..700),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: 'Av. Amália Rodrigues, Odivelas'
   )
   bike1.photo.attach(io: img1, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -34,7 +35,8 @@ sleep(1)
     model: '1200 Custom',
     price: rand(125..700),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: 'Largo Assunção, Cascais'
   )
   bike2.photo.attach(io: img2, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -45,7 +47,8 @@ sleep(1)
     model: 'R Nine Tree Scrambler',
     price: rand(125..700),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: 'Rua do Conde de Redondo, Lisboa'
   )
   bike3.photo.attach(io: img3, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -56,7 +59,8 @@ sleep(1)
     model: 'Soulful Café',
     price: rand(125..700),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: ' Alameda das Comunidades Portuguesas, Lisboa'
   )
   bike4.photo.attach(io: img4, filename: 'bike.png', content_type: 'image/png')
 
@@ -67,7 +71,8 @@ sleep(1)
     model: 'NC750X',
     price: rand(125..700),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: 'R. Manuel Francisco Soromenho, Loures'
   )
   bike5.photo.attach(io: img5, filename: 'bike.png', content_type: 'image/png')
 
@@ -78,7 +83,8 @@ sleep(1)
     model: 'Classic',
     price: rand(125..700),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: 'Escadinhas da Fonte da Pipa, Sintra'
   )
   bike6.photo.attach(io: img6, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -88,7 +94,8 @@ sleep(1)
     model: 'Vespa GTS Touring',
     price: rand(125..700),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: 'Doca de Belém, Lisboa'
   )
   bike7.photo.attach(io: img7, filename: 'bike.png', content_type: 'image/png')
 
@@ -99,7 +106,8 @@ sleep(1)
     model: 'Family Side',
     price: rand(125..800),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: ' Av. do Atlântico, Colares'
   )
   bike8.photo.attach(io: img8, filename: 'bike.png', content_type: 'image/png')
 
@@ -110,7 +118,8 @@ sleep(1)
     model: 'SR',
     price: rand(125..800),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: 'Rua de Goa, Agualva'
   )
   bike9.photo.attach(io: img9, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -121,7 +130,8 @@ sleep(1)
     model: '300R',
     price: rand(125..800),
     speed: rand(120..382),
-    rented: false
+    rented: false,
+    address: 'Rua Humberto Madeira, Lisboa'
   )
   bike10.photo.attach(io: img10, filename: 'bike.png', content_type: 'image/png')
 
@@ -132,7 +142,8 @@ sleep(1)
     model: 'H2R',
     price: rand(700..1200),
     speed: rand(370..408),
-    rented: false
+    rented: false,
+    address: 'Estrada do Cabo da Roca, Azóia'
   )
   bike11.photo.attach(io: img11, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -143,6 +154,7 @@ sleep(1)
     model: 'Monster',
     price: rand(700..1200),
     speed: rand(170..208),
-    rented: false
+    rented: false,
+    address: 'Alameda dos Oceanos, Lisboa'
   )
   bike12.photo.attach(io: img12, filename: 'bike.jpg', content_type: 'image/jpg')

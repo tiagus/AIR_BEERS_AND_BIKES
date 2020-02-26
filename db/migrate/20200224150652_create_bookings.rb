@@ -3,7 +3,7 @@ class CreateBookings < ActiveRecord::Migration[5.2]
     create_table :bookings do |t|
       t.references :user, foreign_key: true
       t.references :bike, foreign_key: true
-      t.date :start_date
+      t.date :start_date, default: Date.today
       t.date :end_date
 
       t.timestamps
