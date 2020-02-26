@@ -23,12 +23,13 @@
 
 
     <div class="col-sm bg-white m-5">
-      <%= simple_form_for :search, method: :get, :html=> { class: 'mx-auto d-block p-5' } do |t| %>
+      <%#= simple_form_for :search, method: :get, :html=> { class: 'mx-auto d-block p-5' } do |t| %>
+      <%= simple_form_for [@bike, @booking], html: { class: 'mx-auto d-block p-5' } do |t| %>
         <div class="form-group">
-          <%= t.input :starts_at, label: false, input_html: { class: "datepicker"}, placeholder: "start date" %>
+          <%= t.input :start_date, label: false, input_html: { class: "datepicker"}, placeholder: "start date" %>
         </div>
         <div class="form-group">
-          <%= t.input :ends_at, label: false, input_html: { class: "datepicker"}, placeholder: "end date" %>
+          <%= t.input :end_date, label: false, input_html: { class: "datepicker"}, placeholder: "end date" %>
         </div>
         <%= t.submit "Book Me Now!", class: "btn btn-primary btn-lg btn-block" %>
       <% end %>
