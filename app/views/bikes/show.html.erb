@@ -1,15 +1,36 @@
-<h1><strong><%= @bike.brand %> <%= @bike.model %></strong></h1>
-<div>
-  <div class="cards-list">
-    <div class="card" style="width: 32rem;">
+<div class="min-vw-100 justify-content-center d-block">
+
+  <div class="row">
+    <h2><%= @bike.brand %> <%= @bike.model %></h2>
+  </div>
+
+  <div class="row bg-white m-5 align-items-center">
+
+    <div class="col-sm bg-white m-5 ">
       <%= cl_image_tag @bike.photo.key, class: "card-img-top"  %>
-      <div class="card-body">
-        <ul>
-          <li>Price: <%= @bike.price%></li>
-          <li>Speed: <%= @bike.speed%></li>
-        </ul>
-        <%= link_to "Book Me Now!", new_bike_booking_path(@bike), class: "btn btn-primary" %>
+      <div class="row mt-3">
+        <div class="col">
+          <h5 class="float-right">Price: <%= @bike.price%></h5>
         </div>
+        <div class="col">
+          <h5 class="float-left">Speed: <%= @bike.speed%></h5>
+        </div>
+      </div>
     </div>
-  <div>
+
+
+    <div class="col-sm bg-white m-5">
+      <%= simple_form_for :search, method: :get, :html=> { class: 'mx-auto d-block p-5' } do |t| %>
+        <div class="form-group">
+          <%= t.input :starts_at, label: false, input_html: { class: "datepicker"}, placeholder: "start date" %>
+        </div>
+        <div class="form-group">
+          <%= t.input :ends_at, label: false, input_html: { class: "datepicker"}, placeholder: "end date" %>
+        </div>
+        <%= t.submit "Book Me Now!", class: "btn btn-primary btn-lg btn-block" %>
+      <% end %>
+    </div>
+
+  </div>
+
 </div>
