@@ -11,3 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.card-img-top:hover{
+  width: 120%;
+}

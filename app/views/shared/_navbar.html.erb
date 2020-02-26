@@ -10,10 +10,6 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
-        <li class="nav-item">
-          <%= link_to "Bikes", bikes_path, class: "nav-link" %>
-        </li>
         <% if user_signed_in? %>
         <li>
           <p class="nav-link"><strong><%= current_user.email.split('@').first %></strong></p>
