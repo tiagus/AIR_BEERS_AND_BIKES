@@ -10,10 +10,13 @@
       <%= cl_image_tag @bike.photo.key, class: "card-img-top"  %>
       <div class="row mt-3">
         <div class="col">
-          <h5 class="float-right">Price: <%= @bike.price%></h5>
+          <h5 class="float-right">Rating ⭐️⭐️⭐️⭐️</h5>
         </div>
         <div class="col">
-          <h5 class="float-left">Speed: <%= @bike.speed%></h5>
+          <h5 class="float-center">Speed: <%= @bike.speed%>Km/h</h5>
+        </div>
+        <div class="col">
+        <h5 class="float-left">Price: <%= @bike.price%> <i class="fas fa-beer"></i><i class="fas fa-beer"></i></h5>
         </div>
       </div>
     </div>

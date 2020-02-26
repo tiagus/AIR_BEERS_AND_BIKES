@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="cards-list justify-content-center">
       <% @bikes.each do |bike| %>
       <%= link_to bike_path(bike) do %>
@@ -11,5 +11,27 @@
       <% end %>
       <% end %>
     </div>
+</div> -->
+
+<div class="container">
+  <div class="row cards">
+
+    <% @bikes.each do |bike| %>
+      <div class="col-4">
+        <div class="card-category-bikes">
+          <%= link_to bike_path(bike) do %>
+            <div class="card-bikes" style="width: 18rem;">
+              <%= cl_image_tag bike.photo.key, class: "card-img-index"  %>
+              <div class="card-body-bikes">
+                <h6><%= "#{bike.brand} #{bike.model}" %></h6>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
+
 <%= render 'shared/map' %>
+
