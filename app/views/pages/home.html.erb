@@ -2,14 +2,21 @@
   <div class="container">
     <div class="cover">
       <h1>Discover Portugal's best Beers and Bikes.</h1>
-      <%= form_tag bikes_path, method: :get, class: 'flex-form' do %>
-        <i class="fas fa-motorcycle"></i>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "flex-form",
-          placeholder: "Find a bike"%>
-        <%= submit_tag "Search" %>
-      <% end %>
+
+        <%= form_tag bikes_path, method: :get, class: 'flex-form' do %>
+          <i class="fas fa-motorcycle"></i>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "flex-form",
+            placeholder: "Find a bike"%>
+          <%= submit_tag "Search" %>
+          <div class="flash flash-danger alert alert-dismissible fade show" role="alert">
+            <span><strong>Disclaimer</strong> If 🏍 Don't drink 🍺 and drive else 🚑  ⚰️  😢</span>
+            <a data-dismiss="alert" aria-label="Close">
+              <i class="fas fa-times"></i>
+            </a>
+          </div>
+        <% end %>
     </div>
   </div>
 </div>
