@@ -1,9 +1,7 @@
-<div class="min-vw-100 justify-content-center d-block">
-
+<div class="min-vw-90 justify-content-center d-block">
   <div class="row">
     <h2><%= @bike.brand %> <%= @bike.model %></h2>
   </div>
-
   <div class="row bg-white m-5 align-items-center">
 
     <div class="col-sm bg-white m-5 ">
@@ -21,20 +19,30 @@
       </div>
     </div>
 
-
     <div class="col-sm bg-white m-5">
-      <%#= simple_form_for :search, method: :get, :html=> { class: 'mx-auto d-block p-5' } do |t| %>
-      <%= simple_form_for [@bike, @booking], html: { class: 'mx-auto d-block p-5' } do |t| %>
-        <div class="form-group">
-          <%= t.input :start_date, label: false, input_html: { class: "datepicker"}, placeholder: "start date" %>
+      <h3>Pickup Location</h3>
+      <%= render 'shared/map' %>
+    </div>
+  </div>
+  <div class="row bg-white m-5 align-items-center">
+  <% if !@bike.rented %>
+      <div class="">
+        <%= simple_form_for [@bike, @booking], html: { class: 'mx-auto d-block p-5' } do |f| %>
+        <div class="col-sm bg-white m-5">
+          <%= f.input :start_date, as: :date, html5: true, default: Date.today %>
         </div>
-        <div class="form-group">
-          <%= t.input :end_date, label: false, input_html: { class: "datepicker"}, placeholder: "end date" %>
+        <div class="col-sm bg-white m-5">
+          <%= f.input :end_date, as: :date, html5: true %>
         </div>
-        <%= t.submit "Book Me Now!", class: "btn btn-primary btn-lg btn-block" %>
+        <div class="text-center">
+          <%= f.submit "Book Now", class: "btn btn-primary btn-lg" %>
+        </div>
+        <% end %>
+      <% else %>
+        <h3>Available in <%= @booking.end_date %></h3>
       <% end %>
     </div>
-
   </div>
-
 </div>
+
+
