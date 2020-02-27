@@ -11,6 +11,7 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 initMapbox();
 
+
 // import { sliderSiema } from 'slider';
 // sliderSiema();
 // import Siema from 'siema';
