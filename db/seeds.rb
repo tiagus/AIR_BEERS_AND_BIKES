@@ -166,7 +166,7 @@ sleep(1)
     price: rand(700...800),
     speed: rand(120...130),
     rented: false,
-    address: 'Avenida Alvaro Pais, Lisboa'
+    address: 'Praca da Liberdade, Porto'
   )
 
   bike13.photo.attach(io: img13, filename: 'bike.jpg', content_type: 'image/jpg')
@@ -178,7 +178,7 @@ sleep(1)
     price: rand(1000...1200),
     speed: rand(140..160),
     rented: false,
-    address: 'Rua de Entrecampos, Lisboa'
+    address: 'Rua dos Bombeiros Voluntarios, Portimao'
   )
   bike14.photo.attach(io: img14, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -189,7 +189,7 @@ sleep(1)
     price: rand(600...750),
     speed: rand(170..208),
     rented: false,
-    address: 'Rua das Quelhas, Lisboa'
+    address: 'Avenida da Boavista, Porto'
   )
   bike15.photo.attach(io: img15, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -233,7 +233,7 @@ sleep(1)
     price: rand(700...800),
     speed: rand(170...200),
     rented: false,
-    address: 'Rua Agostinho Neto, Lisboa'
+    address: 'Rua Luis Mota Feo, Luanda'
   )
   bike19.photo.attach(io: img19, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -277,7 +277,7 @@ sleep(1)
     price: rand(800..1200),
     speed: rand(170..200),
     rented: false,
-    address: 'Rua dos Remedios, Lisboa'
+    address: 'Rua Sidonio Pais, Algarve'
   )
   bike23.photo.attach(io: img23, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -321,7 +321,7 @@ sleep(1)
     price: rand(700..1200),
     speed: rand(110...130),
     rented: false,
-    address: 'Rua Visconde de Satarem, Lisboa'
+    address: 'Rua Rainha Ginga, Luanda'
   )
   bike27.photo.attach(io: img27, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -332,7 +332,7 @@ sleep(1)
     price: rand(700..1200),
     speed: rand(170..208),
     rented: false,
-    address: 'Rua Marques de Alorna, Lisboa'
+    address: 'Rua Jose Estevao, Algarve'
   )
   bike28.photo.attach(io: img28, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -343,7 +343,7 @@ sleep(1)
     price: rand(1100...1300),
     speed: rand(170..208),
     rented: false,
-    address: 'Rua Camilo Pessanha, Lisboa'
+    address: 'Rua Engracia Fragoso, Luanda'
   )
   bike29.photo.attach(io: img29, filename: 'bike.jpg', content_type: 'image/jpg')
 

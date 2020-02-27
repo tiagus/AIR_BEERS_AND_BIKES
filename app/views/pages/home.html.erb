@@ -2,23 +2,29 @@
   <div class="container">
     <div class="cover">
       <h1>Discover Portugal's best Beers and Bikes.</h1>
-
-        <%= form_tag bikes_path, method: :get, class: 'flex-form' do %>
-          <i class="fas fa-motorcycle"></i>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "flex-form",
-            placeholder: "Find a bike"%>
-          <%= submit_tag "Search" %>
-          <div class="flash flash-danger alert alert-dismissible fade show" role="alert">
-            <span><strong>Disclaimer</strong> If 🏍 Don't drink 🍺 and drive else 🚑  ⚰️  😢</span>
-            <a data-dismiss="alert" aria-label="Close">
-              <i class="fas fa-times"></i>
-            </a>
+      <div class="row">
+        <div class="col-6">
+          <div class="search-bike-index" class="">
+            <%= form_tag bikes_path, method: :get,class: "form-inline"  do %>
+              <div class="input-group search-input">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fas fa-motorcycle"></i></div>
+                </div>
+                <%= text_field_tag :query,
+                  params[:query],
+                  class: "form-control form-control-lg",
+                  placeholder: "Find a bike"
+                %>
+              </div>
+              <%= submit_tag "Search", class: "btn btn-danger ml-2 btn-lg" %>
+            <% end %>
           </div>
-        <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
 <%= render 'shared/body' %>
 <%= render 'shared/map' %>

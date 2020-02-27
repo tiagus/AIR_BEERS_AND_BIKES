@@ -1,16 +1,21 @@
-<div class="container">
-  <div class="row pt-5">
+<div class="bikes-banner" id="bikes-index-banner">
+  <div class="row">
     <div class="col-6 offset-3">
       <div class="search-bike-index" class="">
         <%= form_tag bikes_path, method: :get,class: "form-inline"  do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control form-control-lg",
-            placeholder: "Find a bike"
-          %>
+          <div class="input-group search-input">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fas fa-motorcycle"></i></div>
+            </div>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control form-control-lg",
+              placeholder: "Find a bike"
+            %>
+          </div>
           <%= submit_tag "Search", class: "btn btn-danger ml-2 btn-lg" %>
           <%= link_to bikes_path, class: "text-danger ml-2 lg" do %>
-            <i class="far fa-times-circle"></i>
+            <i class="far fa-times-circle ml-2 h3 mt-2 search-cross"></i>
           <% end %>
         <% end %>
       </div>
@@ -19,16 +24,16 @@
 </div>
 
 
-<div class="container">
+<div class="container pt-5 pb-5">
   <div class="row cards">
     <% @bikes.each do |bike| %>
       <div class="col-4">
         <div class="card-category-bikes">
-          <%= link_to bike_path(bike) do %>
-            <div class="card-bikes" style="width: 18rem;">
-              <%= cl_image_tag bike.photo.key, class: "card-img-index"  %>
-              <div class="card-body-bikes">
-                <h6><%= "#{bike.brand} #{bike.model}" %></h6>
+          <%= link_to bike_path(bike), class: "text-decoration-none" do %>
+            <div class="card-bikes mt-5" >
+              <%= cl_image_tag bike.photo.key, class: "card-img-index pb-3"  %>
+              <div class="">
+                <h6 class="text-center text-body font-weight-bolder "><%= "#{bike.brand} #{bike.model}" %></h6>
               </div>
             </div>
           <% end %>

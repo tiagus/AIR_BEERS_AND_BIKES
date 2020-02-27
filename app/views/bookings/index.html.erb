@@ -1,37 +1,32 @@
 <h1 class="text-center">My Bookings</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Brand</th>
-      <th>Model</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <% @bookings.each do |booking| %>
+      <div class="booking-index-card">
+        <div class="booking-index-card-photo">
+            <%= cl_image_tag booking.bike.photo.key %>
+        </div>
+        <div class="booking-index-card-info">
+          <h2><%= booking.bike.brand %></h2>
+           <p> <%= booking.bike.model %></p>
+            <p><%= booking.start_date %></p>
+          <p><%= booking.end_date %></p>
+        </div>
 
-  <tbody>
-    <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= booking.bike.brand %></td>
-        <td><%= booking.bike.model %></td>
-        <td><%= booking.start_date %></td>
-        <td><%= booking.end_date %></td>
-        <td><%= booking.user.email %></td>
-
-        <td>
+        <div class="booking-index-card-info-actions">
           <% if policy(booking).update? %>
-            <%= link_to 'Edit', edit_bike_booking_path(booking.bike, booking) %>
+            <%= link_to edit_bike_booking_path(booking.bike, booking) do %>
+              <i class="fas fa-pencil-alt"></i>
+            <% end %>
           <% end %>
-        </td>
-        <td>
           <% if policy(booking).destroy? %>
-            <%= link_to 'Destroy', bike_booking_path(booking.bike, booking), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to bike_booking_path(booking.bike, booking), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-trash-alt"></i>
           <% end %>
-        </td>
-        </tr>
-    <% end %>
-  </tbody>
-</table>
+          <% end %>
+        </div>
+      </div>
+  <% end %>
+
+
+
+

@@ -15,6 +15,7 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 180px;
+  width: 250px;
 }
 
 .card-category-bikes{
@@ -60,14 +61,27 @@
 
 
 .card-img-index{
-  height: 155px;
+  height: 185px;
   width: 235px;
-  margin-left: 75px;
+  /* margin-left: 75px; */
+  margin: 0px 50px;
 
 }
 
 
 .card-body-bikes h6 {
-text-align: center;
-color: gray;
-  }
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
