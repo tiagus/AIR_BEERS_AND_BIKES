@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2020_02_26_110401) do
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "bike_id"
-    t.date "start_date", default: "2020-02-26"
+    t.date "start_date", default: "2020-02-27"
     t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

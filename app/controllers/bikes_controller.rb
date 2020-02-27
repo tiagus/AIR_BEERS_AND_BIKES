@@ -3,8 +3,14 @@ class BikesController < ApplicationController
   before_action :set_bike, only: :show
 
   def index
-    @bikes = policy_scope(Bike)
-    @bikes_geo = Bike.geocoded
+    if params[:query].present?
+      policy_scope(Bike)
+      @bikes = Bike.search_by_brand_model_and_address(params[:query])
+    else
+      @bikes = policy_scope(Bike)
+    end
+
+    @bikes_geo = @bikes.geocoded
 
     @markers = @bikes_geo.map do |bike|
       {

@@ -1,17 +1,23 @@
-<!-- <div class="row">
-    <div class="cards-list justify-content-center">
-      <% @bikes.each do |bike| %>
-      <%= link_to bike_path(bike) do %>
-      <div class="card" style="width: 18rem;">
-      <%= cl_image_tag bike.photo.key, class: "card-img-top"  %>
-        <div class="card-body">
-          <h6><%= "#{bike.brand} #{bike.model}" %></h6>
-        </div>
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-6 offset-3">
+      <div class="search-bike-index" class="">
+        <%= form_tag bikes_path, method: :get,class: "form-inline"  do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control form-control-lg",
+            placeholder: "Find a bike"
+          %>
+          <%= submit_tag "Search", class: "btn btn-danger ml-2 btn-lg" %>
+          <%= link_to bikes_path, class: "text-danger ml-2 lg" do %>
+            <i class="far fa-times-circle"></i>
+          <% end %>
+        <% end %>
       </div>
-      <% end %>
-      <% end %>
     </div>
-</div> -->
+  </div>
+</div>
+
 
 <div class="container">
   <div class="row cards">
