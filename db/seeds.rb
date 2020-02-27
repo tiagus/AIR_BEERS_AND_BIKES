@@ -277,7 +277,7 @@ sleep(1)
     price: rand(800..1200),
     speed: rand(170..200),
     rented: false,
-    address: 'Rua Sidonio Pais, Portimao'
+    address: 'Rua Sidonio Pais, Algarve'
   )
   bike23.photo.attach(io: img23, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -332,7 +332,7 @@ sleep(1)
     price: rand(700..1200),
     speed: rand(170..208),
     rented: false,
-    address: 'Rua Jose Estevao, Faro'
+    address: 'Rua Jose Estevao, Algarve'
   )
   bike28.photo.attach(io: img28, filename: 'bike.jpg', content_type: 'image/jpg')
 
