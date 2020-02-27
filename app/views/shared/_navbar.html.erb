@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <%= link_to root_path, class: "navbar-brand" do %>
       <h4><i class="fas fa-motorcycle"></i> Air Beers & Bikes</h4>
   <% end %>
@@ -23,10 +23,7 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "btn btn-primary m-1" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Sign In", new_user_registration_path, class: "btn btn-primary m-1" %>
+          <%= link_to "Login/Sign Up", new_user_session_path, class: "btn btn-primary m-1" %>
         </li>
       <% end %>
     </ul>
