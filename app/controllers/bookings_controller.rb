@@ -27,7 +27,8 @@ class BookingsController < ApplicationController
     @bike = Bike.find(params[:bike_id])
     @booking.bike = @bike
     @booking.user = current_user
-    if @booking.save!
+    if @booking.save
+      @bike.rented = true
       redirect_to bookings_path
     else
       render :new
