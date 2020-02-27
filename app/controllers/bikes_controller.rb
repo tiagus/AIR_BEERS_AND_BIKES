@@ -23,11 +23,12 @@ class BikesController < ApplicationController
   end
 
   def show
+    @bikes = Bike.all
     @markers =
       [{
         lat: @bike.latitude,
         lng: @bike.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { bike: @bike }),
+        infoWindow: render_to_string(partial: "info_show", locals: { bike: @bike }),
         image_url: helpers.asset_url(url_for(@bike.photo))
       }]
     @booking = Booking.new
