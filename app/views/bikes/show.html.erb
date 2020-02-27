@@ -48,13 +48,13 @@
     </div>
   </div>
   <div class="bike-show">
-    <h3 class='pb-3 mx-5'>View other Bikes:</h2>
+    <h3 class='p-3 mx-5'>View other Bikes:</h2>
     <div class="row cards mx-5">
         <% @bikes[20..28].each do |bike| %>
         <div class="col-4">
           <div class="card-category-bikes">
             <%= link_to bike_path(bike) do %>
-              <div class="card-bikes" style="width: 15rem;">
+              <div class="card-bikes m-5" style="width: 15rem;">
                 <%= cl_image_tag bike.photo.key, class: "card-img-index"  %>
                 <div class="card-body-bikes">
                   <h6 class="text-right"><%= "#{bike.brand} #{bike.model}" %></h6>
