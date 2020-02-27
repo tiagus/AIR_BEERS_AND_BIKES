@@ -23,6 +23,7 @@ class BikesController < ApplicationController
   end
 
   def show
+    @bikes = Bike.all
     @markers =
       [{
         lat: @bike.latitude,
