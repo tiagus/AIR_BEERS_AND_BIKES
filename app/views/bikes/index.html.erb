@@ -3,11 +3,16 @@
     <div class="col-6 offset-3">
       <div class="search-bike-index" class="">
         <%= form_tag bikes_path, method: :get,class: "form-inline"  do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control form-control-lg search-input",
-            placeholder: "Find a bike"
-          %>
+          <div class="input-group search-input">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fas fa-motorcycle"></i></div>
+            </div>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control form-control-lg",
+              placeholder: "Find a bike"
+            %>
+          </div>
           <%= submit_tag "Search", class: "btn btn-danger ml-2 btn-lg" %>
           <%= link_to bikes_path, class: "text-danger ml-2 lg" do %>
             <i class="far fa-times-circle ml-2 h3 mt-2 search-cross"></i>
