@@ -25,9 +25,11 @@ const initMapbox = () => {
       element.className = 'marker';
       element.style.backgroundImage = `url('${marker.image_url}')`;
       element.style.backgroundSize = 'contain';
+      element.style.backgroundRepeat = 'no-repeat';
       element.style.width = '70px';
       element.style.height = '70px';
       element.style.borderRadius = '50%';
+      element.style.mixBlendMode = 'darken';
     new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
@@ -37,7 +39,5 @@ const initMapbox = () => {
   }
 };
 
-
 export { initMapbox };
-
 
