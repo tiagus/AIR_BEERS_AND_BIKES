@@ -36,6 +36,7 @@ const initMapbox = () => {
       .addTo(map);
     });
   fitMapToMarkers(map, markers);
+  map.scrollZoom.disable();
   }
 };
 
