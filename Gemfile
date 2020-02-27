@@ -21,6 +21,7 @@ gem 'cloudinary', '~> 1.12.0'
 gem 'geocoder'
 gem 'mapbox-gl-rails'
 gem 'pg_search', '~> 2.3.0'
+gem 'coffee-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
