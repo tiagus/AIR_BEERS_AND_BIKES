@@ -211,7 +211,7 @@ sleep(1)
     price: rand(700..1200),
     speed: rand(170..208),
     rented: false,
-    address: 'Rua Gil Vicente, Lisboa'
+    address: 'Benrather Srt, Dusseldorf, Germany'
   )
   bike17.photo.attach(io: img17, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -244,7 +244,7 @@ sleep(1)
     price: rand(700..1200),
     speed: rand(170..208),
     rented: false,
-    address: 'Rua Conde de Almoster, Lisboa'
+    address: 'Via San Francesco, Colobraro MT, Italia'
   )
   bike20.photo.attach(io: img20, filename: 'bike.png', content_type: 'image/png')
 
@@ -299,7 +299,7 @@ sleep(1)
     price: rand(600..750),
     speed: rand(110..150),
     rented: false,
-    address: 'Rua Visconde de Satarem, Lisboa'
+    address: 'Rua Visconde de Sanatrem, Lisboa'
   )
   bike25.photo.attach(io: img25, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -365,7 +365,7 @@ sleep(1)
     price: rand(550...750),
     speed: rand(150...160),
     rented: false,
-    address: 'Rua Alfredo Cortes, Lisboa'
+    address: 'Rua Santa Rita, Itu, Brasil'
   )
   bike31.photo.attach(io: img31, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -376,7 +376,7 @@ sleep(1)
     price: rand(700..1200),
     speed: rand(110...120),
     rented: false,
-    address: 'Rua Alfredo Cortes, Lisboa'
+    address: 'Anderson Blvd, St. Petersburg, FL USA'
   )
   bike32.photo.attach(io: img32, filename: 'bike.jpg', content_type: 'image/jpg')
 
