@@ -32,6 +32,7 @@ class BikesController < ApplicationController
         image_url: helpers.asset_url(url_for(@bike.photo))
       }]
     @booking = Booking.new
+    @current_bookings = Booking.where(bike_id: @bike)
   end
 
 

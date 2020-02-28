@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
       @bike.rented = true
       redirect_to bookings_path
     else
-      render :new
+      redirect_to bike_path(@bike)
     end
   end
 

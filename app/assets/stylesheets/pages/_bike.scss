@@ -16,12 +16,15 @@
 }
 
 
-
 .card-category-bikes {
   transition: transform .5s ease;
 }
 
 .card-category-bikes:hover {
   transform: scale(1.2);
+}
+
+#map-show {
+  opacity: 0.5;
 }
 

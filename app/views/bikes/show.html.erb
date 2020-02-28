@@ -18,7 +18,7 @@
           <h5>Price: <%= @bike.price%> <i class="fas fa-beer"></i><i class="fas fa-beer"></i></h5>
         </div>
         <div class="row mb-3">
-          <h5 class='btn-lg btn-danger mt-5 rounded-pill'  onClick="document.getElementById('middle').scrollIntoView();">Book me</h5>
+          <h5 class='btn-lg btn-danger mt-5 rounded-pill' onClick="document.getElementById('middle').scrollIntoView();">Book me</h5>
         </div>
       </div>
     </div>
@@ -26,7 +26,6 @@
   <div class="row bg-white m-5 align-items-center" id='middle'>
     <div class="col-sm m-5 border border-secondary rounded">
       <h3 class='text-center mt-3'>Bike Reservation</h3>
-      <% if !@bike.rented %>
       <%= simple_form_for [@bike, @booking], html: { class: 'mx-auto d-block p-5' } do |f| %>
       <div class="col-sm p-5">
         <%= f.input :start_date, as: :date, html5: true, default: Date.today %>
@@ -38,9 +37,6 @@
         <%= f.submit "Book Now", class: "btn btn-danger btn-lg btn-block" %>
       </div>
       <% end %>
-      <% else %>
-      <h3>Available in <%= @booking.end_date %></h3>
-      <% end %>
     </div>
     <div class="col-sm m-5 rounded map-show">
       <h6><strong>Pickup Location:</strong> <%= @bike.address %></h6>
@@ -48,6 +44,7 @@
     </div>
   </div>
   <div class="bike-show">
+  <hr>
     <h3 class='p-3 mx-5'>View other Bikes:</h2>
     <div class="row cards mx-5">
         <% @bikes[5..10].each do |bike| %>
