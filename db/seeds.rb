@@ -211,7 +211,7 @@ sleep(1)
     price: rand(700..1200),
     speed: rand(170..208),
     rented: false,
-    address: 'Benrather Srt, Dusseldorf, Germany'
+    address: 'Dusseldorf, Germany'
   )
   bike17.photo.attach(io: img17, filename: 'bike.jpg', content_type: 'image/jpg')
 
