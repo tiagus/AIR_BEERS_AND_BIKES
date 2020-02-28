@@ -13,7 +13,7 @@ sleep(1)
 Booking.destroy_all
 Bike.destroy_all
 
-puts "Creating 12 bikes!"
+puts "Creating 32 bikes!"
 sleep(1)
 
 
@@ -34,7 +34,7 @@ sleep(1)
     brand: 'Harley Davidson' ,
     model: '1200 Custom',
     price: rand(125..700),
-    speed: rand(120..382),
+    speed: rand(198..250),
     rented: false,
     address: 'Largo Assunção, Cascais'
   )
@@ -46,7 +46,7 @@ sleep(1)
     brand: 'BMW' ,
     model: 'R Nine Tree Scrambler',
     price: rand(300...1000),
-    speed: rand(120..382),
+    speed: rand(198..250),
     rented: false,
     address: 'Rua do Conde de Redondo, Lisboa'
   )
@@ -58,7 +58,7 @@ sleep(1)
     brand: 'Triumph' ,
     model: 'Soulful Café',
     price: rand(250..400),
-    speed: rand(120..382),
+    speed: rand(200..222),
     rented: false,
     address: ' Alameda das Comunidades Portuguesas, Lisboa'
   )
@@ -70,7 +70,7 @@ sleep(1)
     brand: 'Honda' ,
     model: 'NC750X',
     price: rand(125..250),
-    speed: rand(120..382),
+    speed: rand(220..282),
     rented: false,
     address: 'R. Manuel Francisco Soromenho, Loures'
   )
@@ -82,7 +82,7 @@ sleep(1)
     brand: 'Royal Enfield' ,
     model: 'Classic',
     price: rand(350...500),
-    speed: rand(120..382),
+    speed: rand(220..282),
     rented: false,
     address: 'Escadinhas da Fonte da Pipa, Sintra'
   )
@@ -93,7 +93,7 @@ sleep(1)
     brand: 'Piaggio' ,
     model: 'Vespa GTS Touring',
     price: rand(75..150),
-    speed: rand(120..382),
+    speed: rand(120..182),
     rented: false,
     address: 'Doca de Belém, Lisboa'
   )
@@ -117,7 +117,7 @@ sleep(1)
     brand: 'Zero' ,
     model: 'SR',
     price: rand(300...350),
-    speed: rand(120..382),
+    speed: rand(120..182),
     rented: false,
     address: 'Rua de Goa, Agualva'
   )
@@ -129,7 +129,7 @@ sleep(1)
     brand: 'Honda' ,
     model: '300R',
     price: rand(125...300),
-    speed: rand(120...140),
+    speed: rand(220...240),
     rented: false,
     address: 'Rua Humberto Madeira, Lisboa'
   )
@@ -153,7 +153,7 @@ sleep(1)
     brand: 'Ducati' ,
     model: 'Monster',
     price: rand(700..1200),
-    speed: rand(170..208),
+    speed: rand(270..308),
     rented: false,
     address: 'Alameda dos Oceanos, Lisboa'
   )
@@ -178,7 +178,7 @@ sleep(1)
     price: rand(1000...1200),
     speed: rand(140..160),
     rented: false,
-    address: 'Rua dos Bombeiros Voluntarios, Portimao'
+    address: 'Rua dos Bombeiros Voluntarios, Portimão'
   )
   bike14.photo.attach(io: img14, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -187,7 +187,7 @@ sleep(1)
     brand: 'Kawasaki' ,
     model: 'Ninja 800',
     price: rand(600...750),
-    speed: rand(170..208),
+    speed: rand(170..408),
     rented: false,
     address: 'Avenida da Boavista, Porto'
   )
@@ -198,7 +198,7 @@ sleep(1)
     brand: 'Suzuki' ,
     model: 'Katana',
     price: rand(700..1200),
-    speed: rand(170..208),
+    speed: rand(370..408),
     rented: false,
     address: 'Rua de Campolide, Lisboa'
   )
@@ -209,7 +209,7 @@ sleep(1)
     brand: 'BMW' ,
     model: 'R 1200 GS',
     price: rand(700..1200),
-    speed: rand(170..208),
+    speed: rand(170..308),
     rented: false,
     address: 'Dusseldorf, Germany'
   )
@@ -220,7 +220,7 @@ sleep(1)
     brand: 'Honda' ,
     model: 'Africa Twin',
     price: rand(700...950),
-    speed: rand(170..190),
+    speed: rand(270..290),
     rented: false,
     address: 'Rua Mario Castrim, Lisboa'
   )
@@ -231,7 +231,7 @@ sleep(1)
     brand: 'Yamaha' ,
     model: 'MT-09',
     price: rand(700...800),
-    speed: rand(170...200),
+    speed: rand(190...300),
     rented: false,
     address: 'Rua Luis Mota Feo, Luanda'
   )
@@ -242,7 +242,7 @@ sleep(1)
     brand: 'Kawasaki' ,
     model: 'Z650',
     price: rand(700..1200),
-    speed: rand(170..208),
+    speed: rand(270..288),
     rented: false,
     address: 'Via San Francesco, Colobraro MT, Italia'
   )
@@ -264,7 +264,7 @@ sleep(1)
     brand: 'Triumph' ,
     model: 'Speed Triple',
     price: rand(300...500),
-    speed: rand(120...140),
+    speed: rand(120...240),
     rented: false,
     address: 'Rua de Xabregas, Lisboa'
   )
@@ -275,7 +275,7 @@ sleep(1)
     brand: 'Aprilia' ,
     model: 'Tuono V4',
     price: rand(800..1200),
-    speed: rand(170..200),
+    speed: rand(270..300),
     rented: false,
     address: 'Rua Sidonio Pais, Algarve'
   )
@@ -286,7 +286,7 @@ sleep(1)
     brand: 'KTM' ,
     model: '1290 Super Duke R',
     price: rand(800..1200),
-    speed: rand(170..208),
+    speed: rand(270..308),
     rented: false,
     address: 'Rua da Veronica, Lisboa'
   )
@@ -297,9 +297,9 @@ sleep(1)
     brand: 'Yamaha' ,
     model: 'FZ-10',
     price: rand(600..750),
-    speed: rand(110..150),
+    speed: rand(210..350),
     rented: false,
-    address: 'Rua Visconde de Sanatrem, Lisboa'
+    address: 'Rua Visconde de Santarém, Lisboa'
   )
   bike25.photo.attach(io: img25, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -308,9 +308,9 @@ sleep(1)
     brand: 'BMW' ,
     model: 'S1000R',
     price: rand(900...1000),
-    speed: rand(160..200),
+    speed: rand(360..400),
     rented: false,
-    address: 'Avendia do Brasil, Lisboa'
+    address: 'Avenida do Brasil, Lisboa'
   )
   bike26.photo.attach(io: img26, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -319,7 +319,7 @@ sleep(1)
     brand: 'Suzuki' ,
     model: 'Gixxer 150',
     price: rand(700..1200),
-    speed: rand(110...130),
+    speed: rand(110...180),
     rented: false,
     address: 'Rua Rainha Ginga, Luanda'
   )
@@ -330,9 +330,9 @@ sleep(1)
     brand: 'Kawasaki' ,
     model: 'Ninja ZX-10',
     price: rand(700..1200),
-    speed: rand(170..208),
+    speed: rand(270..308),
     rented: false,
-    address: 'Rua Jose Estevao, Algarve'
+    address: 'Rua José Estevão, Algarve'
   )
   bike28.photo.attach(io: img28, filename: 'bike.jpg', content_type: 'image/jpg')
 
@@ -341,7 +341,7 @@ sleep(1)
     brand: 'BMW' ,
     model: 'R1200RT',
     price: rand(1100...1300),
-    speed: rand(170..208),
+    speed: rand(300..308),
     rented: false,
     address: 'Rua Engracia Fragoso, Luanda'
   )
@@ -352,7 +352,7 @@ sleep(1)
     brand: 'Triumph' ,
     model: 'Street Scrambler',
     price: rand(600..700),
-    speed: rand(140..150),
+    speed: rand(140..250),
     rented: false,
     address: 'Rua Epifanio Dias, Lisboa'
   )
@@ -374,7 +374,7 @@ sleep(1)
     brand: 'Suzuki' ,
     model: 'Boulevard C50 Special Edition',
     price: rand(700..1200),
-    speed: rand(110...120),
+    speed: rand(110...320),
     rented: false,
     address: 'Anderson Blvd, St. Petersburg, FL USA'
   )
