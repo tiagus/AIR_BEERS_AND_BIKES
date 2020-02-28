@@ -3,12 +3,11 @@
   background: transparent;
   width: 100%;
   transition: 0.5s background-color ease;
-  padding-bottom: 75px;
 }
 
 .navbar-grey {
   background: #a7a6a5;
-
+  opacity: 0.9;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -24,8 +23,8 @@
 }
 
 .nav-item .btn-primary {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
-    }
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
 
